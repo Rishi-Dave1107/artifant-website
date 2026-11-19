@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artifant Technologies | Enterprise IT Staffing and Workforce Solutions</title>
+<meta name="description" content="Artifant Technologies delivers IT staffing and workforce solutions to enterprises across banking, healthcare, insurance, public sector and technology in the United States.">
+<link rel="canonical" href="https://artifanttechnologies.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Artifant Technologies | Enterprise IT Staffing and Workforce Solutions">
+<meta property="og:description" content="IT staffing and workforce solutions for banking, healthcare, insurance, public sector and technology organizations across the United States.">
+<meta property="og:url" content="https://artifanttechnologies.com/">
+<meta name="theme-color" content="#0a1a33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='8' fill='%230a1a33'/%3E%3Cpath d='M12 32 22 11l10 21' stroke='%23fff' stroke-width='3.2' fill='none'/%3E%3Cpath d='M15.8 25.5h12.4' stroke='%23c9a24b' stroke-width='3.2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0a1a33; --navy-2:#10284d; --navy-3:#1a3a6b;
+    --ink:#1b2433; --muted:#5c6779; --line:#e2e7ee; --bg:#f5f7fa; --white:#fff;
+    --gold:#c9a24b; --gold-2:#b38d38; --blue:#2f6fde;
+    --radius:12px; --shadow:0 18px 40px rgba(10,26,51,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:#fff;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:Manrope,Inter,sans-serif;line-height:1.18;color:var(--navy);letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;font-weight:600;font-size:15px;transition:.2s;cursor:pointer;border:0;font-family:Inter,system-ui,sans-serif}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-2)}
+  .btn-navy{background:var(--navy);color:#fff}
+  .btn-navy:hover{background:var(--navy-3)}
+  .btn-line{border:1px solid rgba(255,255,255,.35);color:#fff}
+  .btn-line:hover{background:rgba(255,255,255,.08)}
+  .btn-outline{border:1px solid var(--navy);color:var(--navy)}
+  .btn-outline:hover{background:var(--navy);color:#fff}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);margin-bottom:14px}
+  .eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}
+  section{padding:104px 0}
+  .head{max-width:720px;margin-bottom:56px}
+  .head h2{font-size:clamp(30px,3.4vw,42px);font-weight:800;margin-bottom:16px}
+  .head p{color:var(--muted);font-size:17.5px}
+  .head.center{text-align:center;margin-left:auto;margin-right:auto}
+  .head.center .eyebrow:after{content:"";width:28px;height:2px;background:var(--gold)}
+  .light h2,.light h3,.light h4{color:#fff}
+  .light .head p{color:#aebbd0}
+
+  /* Top bar */
+  .topbar{background:var(--navy);color:#aebbd0;font-size:13.5px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;gap:20px}
+  .topbar div{display:flex;gap:26px;align-items:center}
+  .topbar span{display:inline-flex;align-items:center;gap:8px}
+  .topbar a:hover{color:#fff}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .2s}
+  header.scrolled{box-shadow:0 6px 24px rgba(10,26,51,.07)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:82px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .name{font-family:Manrope,Inter,system-ui,sans-serif;font-weight:800;font-size:22px;color:var(--navy);line-height:1}
+  .logo .sub{display:block;font-size:10.5px;font-weight:700;letter-spacing:.32em;color:var(--gold-2);margin-top:5px}
+  nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+  nav a{font-weight:500;font-size:15px;color:var(--ink);position:relative}
+  nav a:not(.btn):after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.2s}
+  nav a:not(.btn):hover:after{width:100%}
+  nav .btn{padding:11px 22px}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0}
+
+  /* Hero */
+  .hero{position:relative;background:linear-gradient(120deg,#08162c 0%,#0f2850 55%,#163a72 100%);color:#fff;padding:112px 0 128px;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(90deg,transparent,#000 60%)}
+  .hero:after{content:"";position:absolute;right:-180px;top:-180px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.22),transparent 65%)}
+  .hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .hero .eyebrow{color:var(--gold)}
+  .hero h1{color:#fff;font-size:clamp(38px,4.8vw,60px);font-weight:800;margin-bottom:24px}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lead{font-size:19px;color:#c3cede;max-width:580px;margin-bottom:38px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{display:flex;gap:40px;margin-top:52px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+  .hero-meta div strong{display:block;font-family:Manrope,Inter,system-ui,sans-serif;font-size:17px;color:#fff;font-weight:700}
+  .hero-meta div span{font-size:14px;color:#9fb0c8}
+
+  .ind-panel{background:#fff;border-radius:16px;padding:32px;box-shadow:0 30px 60px rgba(0,0,0,.3);color:var(--ink)}
+  .ind-panel .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+  .ind-panel h3{font-size:19px}
+  .ind-panel .pill{font-size:12px;font-weight:600;background:#f3ecdc;color:var(--gold-2);padding:6px 12px;border-radius:30px}
+  .ind-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .ind-tile{display:flex;align-items:center;gap:12px;padding:16px;border:1px solid var(--line);border-radius:10px;transition:.2s}
+  .ind-tile:hover{border-color:var(--gold);background:#fcfaf5}
+  .ind-tile .ic{flex:none;width:40px;height:40px;border-radius:9px;background:var(--navy);display:grid;place-items:center}
+  .ind-tile b{display:block;font-family:Manrope,Inter,system-ui,sans-serif;font-size:14.5px;color:var(--navy);line-height:1.25}
+  .ind-tile small{font-size:12.5px;color:var(--muted)}
+  .ind-panel .foot{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted)}
+  .ind-panel .foot a{color:var(--navy);font-weight:600}
+
+  /* Sector band */
+  .band{background:var(--bg);border-bottom:1px solid var(--line);padding:30px 0;overflow:hidden}
+  .band .wrap{display:flex;align-items:center;gap:40px}
+  .band p{flex:none;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .track{display:flex;gap:56px;width:max-content;animation:scroll 38s linear infinite}
+  .track span{font-family:Manrope,Inter,system-ui,sans-serif;font-weight:700;font-size:18px;color:#8a97ab;white-space:nowrap}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* About */
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .about p.big{font-size:18px;color:var(--muted);margin-bottom:22px}
+  .pillars{display:grid;gap:18px}
+  .pillar{display:flex;gap:20px;padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;transition:.25s}
+  .pillar:hover{box-shadow:var(--shadow);border-color:transparent}
+  .pillar .n{font-family:Manrope,Inter,system-ui,sans-serif;font-weight:800;font-size:15px;color:var(--gold-2);flex:none;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center}
+  .pillar h4{font-size:17.5px;margin-bottom:4px}
+  .pillar p{color:var(--muted);font-size:15px}
+
+  /* Industries */
+  .industries{background:var(--navy);position:relative}
+  .ind-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+  .ind-card{background:var(--navy);padding:38px 34px;transition:.25s}
+  .ind-card:hover{background:var(--navy-2)}
+  .ind-card .ic{width:52px;height:52px;border-radius:12px;background:rgba(201,162,75,.12);border:1px solid rgba(201,162,75,.3);display:grid;place-items:center;margin-bottom:22px}
+  .ind-card h3{font-size:20px;margin-bottom:10px;color:#fff}
+  .ind-card p{color:#aebbd0;font-size:15px;margin-bottom:18px}
+  .ind-card .roles{display:flex;flex-wrap:wrap;gap:8px}
+  .ind-card .roles span{font-size:12.5px;color:#d9e1ee;border:1px solid rgba(255,255,255,.14);padding:5px 11px;border-radius:30px}
+
+  /* Practices */
+  .practices{background:#fff}
+  .pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pr{border:1px solid var(--line);border-radius:var(--radius);padding:34px;position:relative;overflow:hidden;transition:.25s;background:#fff}
+  .pr:before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--gold);transition:.3s}
+  .pr:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .pr:hover:before{width:100%}
+  .pr .ic{width:48px;height:48px;border-radius:10px;background:#eef3fc;display:grid;place-items:center;margin-bottom:20px}
+  .pr h3{font-size:19px;margin-bottom:10px}
+  .pr p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .pr ul{list-style:none;border-top:1px solid var(--line);padding-top:14px}
+  .pr li{font-size:14.5px;padding:5px 0 5px 22px;position:relative}
+  .pr li:before{content:"";position:absolute;left:0;top:13px;width:10px;height:2px;background:var(--gold)}
+
+  /* Models */
+  .models-sec{background:var(--bg)}
+  .models{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .model{background:#fff;border-radius:var(--radius);padding:32px;border:1px solid var(--line)}
+  .model .ic{width:46px;height:46px;border-radius:50%;background:var(--navy);display:grid;place-items:center;margin-bottom:20px}
+  .model h3{font-size:18px;margin-bottom:8px}
+  .model p{color:var(--muted);font-size:15px}
+
+  /* Process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;position:relative}
+  .steps:before{content:"";position:absolute;top:27px;left:6%;right:6%;height:1px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 12px)}
+  .step{position:relative;text-align:center}
+  .step .dot{width:56px;height:56px;margin:0 auto 22px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:grid;place-items:center;font-family:Manrope,Inter,system-ui,sans-serif;font-weight:800;color:var(--navy);position:relative;z-index:1}
+  .step h3{font-size:18px;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:15px;max-width:250px;margin:0 auto}
+
+  /* Commitments */
+  .commit{background:linear-gradient(120deg,#08162c,#10284d)}
+  .commit .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .commit .c{padding:30px;border-left:2px solid var(--gold)}
+  .commit h4{font-size:18px;margin-bottom:8px}
+  .commit p{color:#aebbd0;font-size:15px}
+
+  /* Split */
+  .split .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .box{border-radius:16px;padding:46px;border:1px solid var(--line);background:#fff}
+  .box.dark{background:var(--navy);border-color:var(--navy)}
+  .box.dark h3,.box.dark li{color:#fff}
+  .box.dark p{color:#aebbd0}
+  .box .tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);margin-bottom:10px;display:block}
+  .box h3{font-size:26px;margin-bottom:12px}
+  .box p{color:var(--muted);margin-bottom:22px}
+  .box ul{list-style:none;margin-bottom:30px}
+  .box li{padding:7px 0 7px 30px;position:relative}
+  .box li:before{content:"";position:absolute;left:0;top:13px;width:16px;height:16px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1a33' stroke-width='4'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/10px no-repeat}
+
+  /* CTA band */
+  .cta{padding:0}
+  .cta .inner{background:var(--gold);border-radius:16px;padding:52px 56px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;transform:translateY(50%);position:relative;z-index:2}
+  .cta h2{font-size:clamp(24px,2.6vw,32px);font-weight:800}
+  .cta p{color:#3b2f12;margin-top:6px}
+
+  /* Contact */
+  .contact{background:var(--bg)}
+  .contact .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px}
+  .info{display:grid;gap:22px;margin-bottom:28px}
+  .info-item{display:flex;gap:16px}
+  .info-item .ic{flex:none;width:46px;height:46px;border-radius:10px;background:var(--navy);display:grid;place-items:center}
+  .info-item h4{font-size:15.5px;margin-bottom:2px}
+  .info-item p{color:var(--muted);font-size:15px}
+  .map{position:relative;display:flex;flex-direction:column;gap:14px;min-height:250px;padding:26px;border-radius:var(--radius);overflow:hidden;color:#fff;
+    background:linear-gradient(0deg,rgba(10,26,51,.92),rgba(10,26,51,.35)),
+      repeating-linear-gradient(0deg,transparent 0 38px,rgba(255,255,255,.07) 38px 40px),
+      repeating-linear-gradient(90deg,transparent 0 58px,rgba(255,255,255,.07) 58px 60px),
+      linear-gradient(135deg,#1a3a6b,#10284d);transition:.25s}
+  .map:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .map-pin{align-self:center;margin-bottom:auto;width:58px;height:58px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 10px rgba(201,162,75,.25)}
+  .map-text strong{display:block;font-family:Manrope,Inter,system-ui,sans-serif;font-size:17px}
+  .map-text span{font-size:14.5px;color:#c3cede}
+  .map-btn{align-self:flex-start;background:var(--gold);color:var(--navy);font-weight:600;font-size:14px;padding:9px 16px;border-radius:6px}
+  form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:var(--shadow)}
+  form h3{font-size:22px;margin-bottom:6px}
+  form > p{color:var(--muted);font-size:15px;margin-bottom:24px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px;color:var(--navy)}
+  input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d3dae4;border-radius:8px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(26,58,107,.12)}
+  textarea{min-height:120px;resize:vertical}
+  .note{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+
+  /* Footer */
+  footer{background:#06111f;color:#9aa9bf;padding:72px 0 28px;font-size:15px}
+  footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;margin-bottom:48px}
+  footer h4{color:#fff;font-size:15px;margin-bottom:18px}
+  footer ul{list-style:none}
+  footer li{padding:5px 0}
+  footer a:hover{color:#fff}
+  footer .logo .name{color:#fff}
+  footer .about-f{margin-top:18px;max-width:320px}
+  .bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13.5px}
+
+  /* Reveal */
+  .js .rv{opacity:0;transform:translateY(18px);transition:.7s ease}
+  .js .rv.in{opacity:1;transform:none}
+
+  @media (max-width:1024px){
+    .hero .grid,.about .grid,.contact .grid,.split .grid{grid-template-columns:1fr}
+    .ind-cards,.pr-grid{grid-template-columns:repeat(2,1fr)}
+    .models,.commit .grid{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:repeat(2,1fr);row-gap:44px}
+    .steps:before{display:none}
+    footer .grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:760px){
+    section{padding:76px 0}
+    .topbar{display:none}
+    .burger{display:block}
+    nav ul{position:absolute;top:82px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 28px 22px;border-bottom:1px solid var(--line);display:none;box-shadow:0 12px 24px rgba(0,0,0,.06)}
+    nav ul.open{display:flex}
+    nav li{width:100%;padding:12px 0;border-bottom:1px solid var(--line)}
+    nav li:last-child{border:0;padding-top:18px}
+    .ind-cards,.pr-grid,.models,.commit .grid,.steps,.row,footer .grid,.ind-grid{grid-template-columns:1fr}
+    .hero{padding:80px 0 96px}
+    .band .wrap{flex-direction:column;align-items:flex-start;gap:14px}
+    .cta .inner{padding:38px 30px}
+    .box,form{padding:30px}
+    .row{gap:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg>639 S Locust St, Suite 107, Grand Island, NE 68801</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:info@artifanttechnologies.com">info@artifanttechnologies.com</a></span>
+    </div>
+    <div><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+17137698685">+1 (713) 769-8685</a></span><span>Mon to Fri, 9:00 AM to 6:00 PM CT</span></div>
+  </div>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Artifant Technologies home">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#0a1a33"/><path d="M12 32 22 11l10 21" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="square" stroke-linejoin="miter"/><path d="M15.8 25.5h12.4" stroke="#c9a24b" stroke-width="3.2"/></svg>
+      <div><div class="name">ARTIFANT</div><span class="sub">TECHNOLOGIES</span></div>
+    </a>
+    <button class="burger" aria-label="Open menu" aria-controls="menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', document.getElementById('menu').classList.toggle('open'))"><span></span><span></span><span></span></button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact" class="btn btn-navy">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Enterprise IT Staffing and Workforce Solutions</span>
+      <h1>Technology talent for organizations that <span>can't afford to compromise.</span></h1>
+      <p class="lead">Artifant Technologies partners with banks, healthcare systems, insurers and public sector agencies across the United States to deliver proven IT professionals, on time and fully vetted.</p>
+      <div class="ctas">
+        <a href="#contact" class="btn btn-gold">Hire Talent
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#careers" class="btn btn-line">Explore Careers</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Contract</strong><span>Project-based talent</span></div>
+        <div><strong>Contract to Hire</strong><span>Evaluate before you commit</span></div>
+        <div><strong>Direct Hire</strong><span>Permanent placements</span></div>
+      </div>
+    </div>
+
+    <div class="ind-panel">
+      <div class="top"><h3>Industries We Serve</h3><span class="pill">Nationwide</span></div>
+      <div class="ind-grid">
+        <a href="#industries" class="ind-tile"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10 12 3l10 7z"/></svg></div><div><b>Banking and Financial Services</b><small>Retail, commercial, capital markets</small></div></a>
+        <a href="#industries" class="ind-tile"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg></div><div><b>Healthcare and Life Sciences</b><small>Providers, payers, pharma</small></div></a>
+        <a href="#industries" class="ind-tile"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><b>Insurance</b><small>P&amp;C, life, health</small></div></a>
+        <a href="#industries" class="ind-tile"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></div><div><b>Government and Public Sector</b><small>Federal, state, local</small></div></a>
+        <a href="#industries" class="ind-tile"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div><div><b>Retail and Consumer</b><small>E-commerce, supply chain</small></div></a>
+        <a href="#industries" class="ind-tile"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><div><b>Technology and Telecom</b><small>SaaS, cloud, communications</small></div></a>
+      </div>
+      <div class="foot"><span>Fortune 500 and mid-market clients</span><a href="#industries">View all &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTOR BAND -->
+<div class="band">
+  <div class="wrap">
+    <p>Delivering talent across</p>
+    <div class="marquee"><div class="track">
+      <span>Top US Banks</span><span>Health Systems</span><span>Health Insurers</span><span>Life and P&amp;C Insurance</span><span>Capital Markets</span><span>Wealth Management</span><span>Pharma and Life Sciences</span><span>Federal and State Agencies</span><span>Fortune 500 Enterprises</span><span>Fintech</span>
+      <span>Top US Banks</span><span>Health Systems</span><span>Health Insurers</span><span>Life and P&amp;C Insurance</span><span>Capital Markets</span><span>Wealth Management</span><span>Pharma and Life Sciences</span><span>Federal and State Agencies</span><span>Fortune 500 Enterprises</span><span>Fintech</span>
+    </div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="eyebrow">Who We Are</span>
+      <h2 style="font-size:clamp(30px,3.4vw,42px);font-weight:800;margin-bottom:22px">A specialist IT staffing partner for regulated, high-stakes industries</h2>
+      <p class="big">Artifant Technologies is a US-based IT consulting and staffing firm headquartered in Grand Island, Nebraska. We help enterprises build stronger technology teams by placing professionals who bring both technical depth and an understanding of the business they support.</p>
+      <p class="big">Our recruiters focus on the roles that drive transformation: analysis, agile delivery, engineering, Salesforce, data governance and program leadership.</p>
+      <a href="#contact" class="btn btn-outline">Partner With Us</a>
+    </div>
+    <div class="pillars rv">
+      <div class="pillar"><div class="n">01</div><div><h4>Industry Fluency</h4><p>We understand compliance-driven environments such as banking regulation, HIPAA and insurance operations.</p></div></div>
+      <div class="pillar"><div class="n">02</div><div><h4>Rigorous Vetting</h4><p>Technical assessments, reference checks and background verification before every submission.</p></div></div>
+      <div class="pillar"><div class="n">03</div><div><h4>Speed With Precision</h4><p>A curated shortlist of qualified candidates, delivered quickly without sacrificing fit.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries light" id="industries">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow" style="color:var(--gold)">Industries</span>
+      <h2>Trusted where accuracy, security and compliance matter most</h2>
+      <p>We support technology teams at leading US banks, health systems, insurers and agencies with talent that understands their domain.</p>
+    </div>
+    <div class="ind-cards rv">
+      <div class="ind-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M2 10 12 3l10 7z"/></svg></div>
+        <h3>Banking and Financial Services</h3>
+        <p>Talent for retail and commercial banking, capital markets, wealth management, risk, regulatory reporting and core banking modernization.</p>
+        <div class="roles"><span>Risk and Compliance BA</span><span>Data Governance</span><span>Java Developer</span><span>Program Manager</span></div>
+      </div>
+      <div class="ind-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg></div>
+        <h3>Healthcare and Life Sciences</h3>
+        <p>Professionals for hospital systems, payers and pharma, with experience in EHR platforms, claims systems, HIPAA and clinical data.</p>
+        <div class="roles"><span>Healthcare BA</span><span>Data Analyst</span><span>Data Quality</span><span>Project Manager</span></div>
+      </div>
+      <div class="ind-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Insurance</h3>
+        <p>Support for policy administration, claims, underwriting and actuarial data across P&amp;C, life and health insurance carriers.</p>
+        <div class="roles"><span>Product Owner</span><span>Salesforce Developer</span><span>Data Steward</span><span>QA Analyst</span></div>
+      </div>
+      <div class="ind-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></div>
+        <h3>Government and Public Sector</h3>
+        <p>Delivery talent for federal, state and local modernization programs, citizen services and secure data initiatives.</p>
+        <div class="roles"><span>Scrum Master</span><span>Business Analyst</span><span>.NET Developer</span><span>PMO Lead</span></div>
+      </div>
+      <div class="ind-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h3>Retail and Consumer</h3>
+        <p>Engineers and analysts for e-commerce platforms, customer data, supply chain systems and omnichannel experiences.</p>
+        <div class="roles"><span>Full Stack Developer</span><span>Salesforce Admin</span><span>Data Analyst</span></div>
+      </div>
+      <div class="ind-card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
+        <h3>Technology and Telecom</h3>
+        <p>Specialists for SaaS product teams, cloud migrations, network platforms and digital transformation programs.</p>
+        <div class="roles"><span>Cloud Engineer</span><span>DevOps</span><span>Product Owner</span><span>Agile Coach</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="practices" id="expertise">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Our Expertise</span>
+      <h2>Specialized practices, deep talent networks</h2>
+      <p>Each practice is led by recruiters who understand the role, the tools and what great performance looks like.</p>
+    </div>
+    <div class="pr-grid rv">
+      <div class="pr">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+        <h3>Business Analysis</h3>
+        <p>Translating business strategy into clear requirements and measurable outcomes.</p>
+        <ul><li>Business Analysts</li><li>Systems and Functional Analysts</li><li>Business Process Analysts</li></ul>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>Agile and Product</h3>
+        <p>Leaders who drive delivery cadence and maximize product value.</p>
+        <ul><li>Scrum Masters</li><li>Product Owners and Product Managers</li><li>Agile Coaches and RTEs</li></ul>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h3>Software Engineering</h3>
+        <p>Engineers across enterprise and modern cloud-native stacks.</p>
+        <ul><li>Java, .NET and Python Developers</li><li>Full Stack and Front End</li><li>QA Automation, Cloud and DevOps</li></ul>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.6 12.5 3.5 3.5 0 0 0 6.5 19z"/></svg></div>
+        <h3>Salesforce</h3>
+        <p>Certified professionals across Sales, Service, Health and Financial Services Cloud.</p>
+        <ul><li>Salesforce Developers</li><li>Administrators and Consultants</li><li>Technical Architects</li></ul>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+        <h3>Data, Governance and Quality</h3>
+        <p>Experts who make enterprise data trusted, compliant and ready for analytics and AI.</p>
+        <ul><li>Data Analysts and BI Developers</li><li>Data Governance and Data Quality</li><li>Data Stewards and Metadata Specialists</li></ul>
+      </div>
+      <div class="pr">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <h3>Project and Program Leadership</h3>
+        <p>Delivery leaders who manage scope, budget, risk and executive stakeholders.</p>
+        <ul><li>Project Managers</li><li>Program Managers</li><li>PMO Leads and Analysts</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="models-sec" id="solutions">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Workforce Solutions</span>
+      <h2>Engagement models built around your needs</h2>
+      <p>Whether you need one specialist or a full delivery team, we structure the engagement to match your timeline and budget.</p>
+    </div>
+    <div class="models rv">
+      <div class="model"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Contract Staffing</h3><p>Skilled consultants for short and long-term initiatives, ready to start quickly.</p></div>
+      <div class="model"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><h3>Contract to Hire</h3><p>Assess skills and culture fit on the job before extending a permanent offer.</p></div>
+      <div class="model"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 11l2 2 4-4"/></svg></div><h3>Direct Hire</h3><p>Permanent placements for leadership and business-critical positions.</p></div>
+      <div class="model"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></div><h3>Project Teams</h3><p>Ready-to-deploy squads with BA, Scrum Master, developers and QA.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Our Process</span>
+      <h2>A disciplined approach to every placement</h2>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div class="dot">01</div><h3>Discovery</h3><p>We learn your role, technology stack, team culture and timeline.</p></div>
+      <div class="step"><div class="dot">02</div><h3>Targeted Sourcing</h3><p>We search our talent network and the wider market for the right match.</p></div>
+      <div class="step"><div class="dot">03</div><h3>Screening and Vetting</h3><p>Technical evaluation, behavioral interviews, references and background checks.</p></div>
+      <div class="step"><div class="dot">04</div><h3>Placement and Care</h3><p>Smooth onboarding and ongoing check-ins to make sure the placement succeeds.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENTS -->
+<section class="commit light">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow" style="color:var(--gold)">Our Commitment</span>
+      <h2>What every client can count on</h2>
+    </div>
+    <div class="grid rv">
+      <div class="c"><h4>Compliance First</h4><p>Background checks, work authorization verification and adherence to client onboarding standards.</p></div>
+      <div class="c"><h4>Dedicated Account Manager</h4><p>One point of contact who knows your business and your open roles.</p></div>
+      <div class="c"><h4>Quality Shortlists</h4><p>Only candidates who meet your requirements reach your desk.</p></div>
+      <div class="c"><h4>Transparent Partnership</h4><p>Clear communication, honest timelines and straightforward terms.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS / CANDIDATES -->
+<section class="split" id="careers">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Get Started</span>
+      <h2>Building a team or building a career?</h2>
+    </div>
+    <div class="grid rv">
+      <div class="box">
+        <span class="tag">For Employers</span>
+        <h3>Hire with confidence</h3>
+        <p>Access pre-vetted IT professionals who can contribute from the first week.</p>
+        <ul><li>Qualified candidates, often within days</li><li>Contract, contract-to-hire and direct hire</li><li>Single specialists or complete project teams</li><li>Domain experience in your industry</li></ul>
+        <a href="#contact" class="btn btn-navy">Submit a Job Requirement</a>
+      </div>
+      <div class="box dark">
+        <span class="tag">For Professionals</span>
+        <h3>Advance your IT career</h3>
+        <p>Work on meaningful projects with leading organizations across the United States.</p>
+        <ul><li>Contract and full-time opportunities</li><li>Roles at major banks, insurers and health systems</li><li>Resume and interview guidance</li><li>Support from offer through onboarding</li></ul>
+        <a href="mailto:careers@artifanttechnologies.com?subject=Resume%20Submission" class="btn btn-gold">Submit Your Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="inner">
+      <div><h2>Ready to fill your next critical IT role?</h2><p>Speak with our team today and receive qualified profiles fast.</p></div>
+      <a href="#contact" class="btn btn-navy">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" style="padding-top:170px">
+  <div class="wrap grid">
+    <div class="rv">
+      <span class="eyebrow">Contact</span>
+      <h2 style="font-size:clamp(30px,3.4vw,42px);font-weight:800;margin-bottom:16px">Let's discuss your workforce needs</h2>
+      <p style="color:var(--muted);font-size:17px;margin-bottom:34px">Our team responds to every inquiry within one business day.</p>
+      <div class="info">
+        <div class="info-item"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg></div><div><h4>Headquarters</h4><p>639 S Locust St, Suite 107<br>Grand Island, NE 68801</p></div></div>
+        <div class="info-item"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><div><h4>Phone</h4><p><a href="tel:+17137698685">+1 (713) 769-8685</a></p></div></div>
+        <div class="info-item"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div><div><h4>Email</h4><p><a href="mailto:info@artifanttechnologies.com">info@artifanttechnologies.com</a><br><a href="mailto:careers@artifanttechnologies.com">careers@artifanttechnologies.com</a></p></div></div>
+        <div class="info-item"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a24b" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h4>Business Hours</h4><p>Monday to Friday, 9:00 AM to 6:00 PM CT</p></div></div>
+      </div>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=639+S+Locust+St+Suite+107+Grand+Island+NE+68801" target="_blank" rel="noopener" aria-label="Open office location in Google Maps">
+        <div class="map-pin"><svg width="26" height="26" viewBox="0 0 24 24" fill="#c9a24b" stroke="#0a1a33" stroke-width="1.5"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3" fill="#0a1a33"/></svg></div>
+        <div class="map-text"><strong>Artifant Technologies</strong><span>639 S Locust St, Suite 107, Grand Island, NE 68801</span></div>
+        <span class="map-btn">Get Directions &rarr;</span>
+      </a>
+    </div>
+
+    <form id="contactForm" class="rv">
+      <h3>Send Us a Message</h3>
+      <p>Tell us about your requirement or the role you are looking for.</p>
+      <div class="row">
+        <div class="field"><label for="name">Full Name *</label><input id="name" name="name" required></div>
+        <div class="field"><label for="company">Company</label><input id="company" name="company"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="email">Business Email *</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="type">I am</label>
+          <select id="type" name="type"><option>An employer looking to hire</option><option>An IT professional seeking a role</option><option>Other</option></select></div>
+        <div class="field"><label for="role">Role of Interest</label>
+          <select id="role" name="role"><option>Business Analyst</option><option>Scrum Master</option><option>Software Developer</option><option>Salesforce Developer</option><option>Data Analyst</option><option>Data Governance / Data Quality</option><option>Data Steward</option><option>Product Owner</option><option>Project Manager</option><option>Program Manager</option><option>Other IT Role</option></select></div>
+      </div>
+      <div class="field"><label for="industry">Industry</label>
+        <select id="industry" name="industry"><option>Banking and Finance</option><option>Healthcare and Life Sciences</option><option>Insurance</option><option>Government and Public Sector</option><option>Retail and Consumer</option><option>Technology and Telecom</option><option>Other</option></select></div>
+      <div class="field"><label for="msg">Message</label><textarea id="msg" name="message" placeholder="Role details, number of positions, location and timeline"></textarea></div>
+      <button class="btn btn-navy" type="submit" style="width:100%;justify-content:center">Submit Inquiry</button>
+      <p class="note">Your information is kept confidential and never shared.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a href="#top" class="logo"><svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#10284d"/><path d="M12 32 22 11l10 21" stroke="#fff" stroke-width="3.2" fill="none"/><path d="M15.8 25.5h12.4" stroke="#c9a24b" stroke-width="3.2"/></svg><div><div class="name">ARTIFANT</div><span class="sub">TECHNOLOGIES</span></div></a>
+        <p class="about-f">Enterprise IT staffing and workforce solutions for banking, healthcare, insurance, public sector and technology organizations across the United States.</p>
+      </div>
+      <div><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#solutions">Workforce Solutions</a></li><li><a href="#process">Our Process</a></li><li><a href="#careers">Careers</a></li></ul></div>
+      <div><h4>Industries</h4><ul><li><a href="#industries">Banking and Finance</a></li><li><a href="#industries">Healthcare</a></li><li><a href="#industries">Insurance</a></li><li><a href="#industries">Public Sector</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>639 S Locust St, Suite 107</li><li>Grand Island, NE 68801</li><li><a href="tel:+17137698685">+1 (713) 769-8685</a></li><li><a href="mailto:info@artifanttechnologies.com">info@artifanttechnologies.com</a></li></ul></div>
+    </div>
+    <div class="bottom"><span>&copy; <span id="yr"></span> Artifant Technologies. All rights reserved.</span><span>An Equal Opportunity Employer</span></div>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.className = 'js';
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => { document.getElementById('menu').classList.remove('open'); document.querySelector('.burger').setAttribute('aria-expanded','false'); }));
+  const hdr = document.getElementById('hdr');
+  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 10));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  // Contact form opens the visitor's email app. Replace with Formspree for direct inbox delivery.
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, v = n => f.elements[n].value;
+    const body = `Name: ${v('name')}\nCompany: ${v('company')}\nEmail: ${v('email')}\nPhone: ${v('phone')}\nI am: ${v('type')}\nIndustry: ${v('industry')}\nRole: ${v('role')}\n\n${v('message')}`;
+    location.href = `mailto:info@artifanttechnologies.com?subject=${encodeURIComponent('Website Inquiry: ' + v('role'))}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+</body>
+</html>
